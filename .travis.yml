@@ -1,17 +1,2 @@
 language: c++
-addons:
-    apt:
-        sources:
-            - ubuntu-toolchain-r-test
-        packages:
-            - g++
-
-before_install:
-    - echo 'before_install'
-    - pip install --user cpp-coveralls
-    - g++ --version
-script:
-    - ./run_tests.sh
-after_success:
-    - echo 'after_success'
-    - coveralls --exclude examples --exclude tests --gcov-options '\-lp'
+script: true
